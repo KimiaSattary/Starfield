@@ -17,7 +17,7 @@ void draw()
   background(10,10,50);
   for(int h=0; h<200; h++)
   {
-    fill(255,255,255,200-h);
+    stroke(255,255,255,200-h);
     line(0,250-h,500,250-h);
   }
 	for(int i = 0; i<100; i++)
@@ -25,7 +25,7 @@ void draw()
 
 		lights[i].show();
     what.show();
-    //what.move();
+    what.move();
 		lights[i].move();
 	}
  
@@ -81,18 +81,17 @@ class OddballParticle extends Particle
   }
   void move()
   {
-  
-    myX = myX + (float)(Math.random()*3)-1;
-    myY = myX + (float)(Math.random()*3)-10;
-    if(myX<-10||myX>510)
+    myX = myX + (float)Math.random()*-.2+.1;
+    if(myX<247 || myY>252)
     {
-      myX=250;
-      myY=250;
+      myX = 250;
+      myY = 250;
     }
-    if(myY<-10||myY>510)
+    myY = myY + (float)Math.random()*-.2+.1;
+    if(myY<247 || myY>252)
     {
-      myX=250;
-      myY=250;
+      myX = 250;
+      myY = 250;
     }
   }
 }
