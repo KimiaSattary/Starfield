@@ -25,12 +25,9 @@ void draw()
 
 		lights[i].show();
     what.show();
-    what.move();
+    //what.move();
 		lights[i].move();
 	}
-  for(int k = 0; k<200;k++)
-  if(k%10==0)
-  what.move();
  
 }
 class Particle
@@ -80,7 +77,7 @@ class OddballParticle extends Particle
 	void show()
   {
     fill(255,0,0);
-    ellipse(myX+20, myY, 10,10);
+    ellipse(myX, myY, 10,10);
   }
   void move()
   {
